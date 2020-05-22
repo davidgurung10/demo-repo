@@ -7,9 +7,9 @@ pipeline {
                 sh 'python3 -m py_compile code.py'
             }
         }
-        stage('install pytest --user'){
+        stage('install pytest'){
          steps{
-            sh'pip3 install pytest'}
+            sh'pip3 install pytest --user'}
             }
         stage('test') {
             steps {
